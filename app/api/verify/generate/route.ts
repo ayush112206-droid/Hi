@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import crypto from 'crypto';
 
 const SECRET = process.env.VERIFY_SECRET || 'default_secret_for_verification_vip_study_2026';
-const VPLINK_API = '64cb3994119c683652e7f241880b1f4b3dda5e37';
+const VPLINK_API = process.env.VPLINK_API || '64cb3994119c683652e7f241880b1f4b3dda5e37';
 
 export async function POST(req: Request) {
   try {
